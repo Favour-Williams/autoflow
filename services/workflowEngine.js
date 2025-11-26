@@ -236,55 +236,10 @@ class WorkflowEngine {
 
 module.exports = WorkflowEngine;
 
-// ============================================================================
-// USAGE EXAMPLE
-// ============================================================================
-/*
 
-const engine = new WorkflowEngine();
-
-const workflow = {
-    id: "test_workflow_001",
-    name: "Test Workflow",
-    actions: [
-        {
-            id: "step1",
-            type: "ai",
-            config: {
-                action: "extract_email",
-                input: "{{trigger.email_content}}"
-            },
-            output: "extracted_data"
-        },
-        {
-            id: "step2",
-            type: "db_query",
-            config: {
-                query: "SELECT * FROM users WHERE email = ?",
-                params: ["{{extracted_data.email}}"]
-            },
-            output: "user_data"
-        },
-        {
-            id: "step3",
-            type: "ai",
-            config: {
-                action: "generate_response",
-                input: {
-                    user: "{{user_data}}",
-                    inquiry: "{{trigger.email_content}}"
-                }
-            },
-            output: "response"
-        }
-    ]
-};
-
-const triggerData = {
-    email_content: "Hi, I'm john@example.com and I need help with pricing."
-};
 
 const result = await engine.execute(workflow, triggerData);
 console.log(result);
 
 */
+
